@@ -4,6 +4,17 @@
 2. install material ui icons
 `npm install @mui/icons-material`
 
+# This is our file structure
+project/
+├─ public/             # This is the Next.js convention for static assets
+│  ├─ images/          # Example for images
+│  ├─ css/             # Example for custom CSS files
+├─ src/
+│  ├─ app/             # App-specific components or App Router logic
+│  ├─ pages/           # Pages of your application, includes Next.js's routing
+│  │  ├─ _app.js       # Custom App component for global styles/providers
+│  │  ├─ index.js      # Main page
+│  ├─ components/      # Optional based on your preference, for reusable components
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -37,8 +48,10 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Issue troubleshooting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### if we face permission denied while 'npm run dev'
+`cd simply-health`
+`sudo chown -R $(whoami) .`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
