@@ -1,11 +1,3 @@
-# install steps:
-1. install material ui
-`npm install @mui/material @emotion/react @emotion/styled`
-2. install material ui icons
-`npm install @mui/icons-material`
-
-
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
