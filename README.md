@@ -4,17 +4,26 @@
 2. install material ui icons
 `npm install @mui/icons-material`
 
-# This is our file structure
+# Project Structure Explanation
+
+This document outlines the file structure of our Next.js project. The structure follows the convention suggested by Next.js and organizes the static assets, application-specific components, pages, and reusable components neatly.
+
+## File Structure
+
+Below is the tree structure of our project, which includes directories for public assets like images and CSS, source code including app components and pages, and a section for reusable components.
+
+```plaintext
 project/
 ├─ public/             # This is the Next.js convention for static assets
-│  ├─ images/          # Example for images
-│  ├─ css/             # Example for custom CSS files
+│  ├─ images/          # Directory for images
+│  ├─ css/             # Directory for custom CSS files
 ├─ src/
-│  ├─ app/             # App-specific components or App Router logic
-│  ├─ pages/           # Pages of your application, includes Next.js's routing
+│  ├─ app/             # Contains App-specific components or App Router logic
+│  ├─ pages/           # Contains pages of your application, includes Next.js's routing
 │  │  ├─ _app.js       # Custom App component for global styles/providers
-│  │  ├─ index.js      # Main page
-│  ├─ components/      # Optional based on your preference, for reusable components
+│  │  ├─ index.js      # Main landing page
+│  ├─ components/      # Directory for reusable components, optional based on your preference
+```
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -52,6 +61,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 #### if we face permission denied while 'npm run dev'
 `cd simply-health`
+
 `sudo chown -R $(whoami) .`
 
 
