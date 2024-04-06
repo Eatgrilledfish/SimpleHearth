@@ -1,35 +1,62 @@
-import { Container, Typography, Button } from '@mui/material';
-
+import { Container, Typography, Button, Box, Paper } from '@mui/material';
+import InputFileUpload from './InputFileUpload';
 
 const HomePage = () => {
   return (
-    <Container maxWidth="sm" sx={{
-        
-      position: 'relative',
-      textAlign: 'center', // 确保文本和按钮居中
-      pt: 10, // 上边距，使用主题中的间距值
-      pb: 10, // 下边距
-      pl: 7, // 与logo相同的左边距
-      pr: 7, // 右边距
-      backgroundImage: `url(${'/sweethome.png'})`,
-      minHeight: '100vh',
-      backgroundSize: 'cover', // 背景图片覆盖整个容器
-      backgroundPosition: 'center', // 背景图片居中显示
-    }}>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Is bad insulation costing you more than money?
-      </Typography>
-      <Button variant="contained" sx={{
-        mt: 2, // 按钮上边距
-        backgroundColor: '#ADD8E6', // 浅蓝色背景
-        color: 'white', // 白色文字
-        '&:hover': {
-          backgroundColor: '#90CEE6', // 鼠标悬停时的按钮背景色变化
-        },
+    <>
+      <Box sx={{
+        display: 'flex',
+        flexDirection: 'column', // Stack items vertically
+        alignItems: 'center', // Center items horizontally
+        justifyContent: 'center', // Center items vertically
+        height: '100vh', // Make the Box take up the full viewport height
+        backgroundImage: `url(${'/sweethome.png'})`,
+        backgroundSize: 'cover', // Ensure the image covers the Box
+        backgroundPosition: 'center', // Center the background image
+        textAlign: 'center', // Center the text
       }}>
-        Find Out How
-      </Button>
-    </Container>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Is bad insulation costing you more than money?
+        </Typography>
+        <Button variant="contained" sx={{
+          mt: 2, // Button top margin
+          backgroundColor: '#ADD8E6', // Light blue background
+          color: 'white', // White text
+          '&:hover': {
+            backgroundColor: '#90CEE6', // Change background on hover
+          },
+        }}>
+          Find Out How
+        </Button>
+      </Box>
+
+      {/* 新增的白色背景Box */}
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 4, bgcolor: 'white', mt: 2 ,height: '600px'}}>
+        <Box>
+          <Typography variant="h5" gutterBottom>Seeing Is believing</Typography>
+          <Typography variant="body1" gutterBottom>
+          Fill our downloadable template with your previous E-bills and upload it to see your next month's estimate.
+          </Typography>
+          <Button variant="contained">Upload</Button>
+        </Box>
+        <Box>
+          <img src="/upload.png" alt="Side Image" style={{ width: '450px', height: '450px' }} />
+        </Box>
+      </Box>
+
+      {/* 粉色背景Box，包含三个长方形模块 */}
+      <Box sx={{ display: 'flex', justifyContent: 'space-around', p: 3, bgcolor: 'pink', mt: 2, height: '350px'}}>
+        <Paper sx={{ bgcolor: 'yellow', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
+          <Typography>Yellow Box</Typography>
+        </Paper>
+        <Paper sx={{ bgcolor: 'grey', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
+          <Typography>Grey Box</Typography>
+        </Paper>
+        <Paper sx={{ bgcolor: 'cyan', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
+          <Typography>Cyan Box</Typography>
+        </Paper>
+      </Box>
+    </>
   );
 };
 
