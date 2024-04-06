@@ -1,5 +1,5 @@
 import { Container, Typography, Button } from '@mui/material';
-import sweethome from '../assets/sweethome.png';
+
 
 const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ const HomePage = () => {
       pb: 10, // 下边距
       pl: 7, // 与logo相同的左边距
       pr: 7, // 右边距
-      backgroundImage: `url(${sweethome})`,
+      backgroundImage: `url(${'/sweethome.png'})`,
       minHeight: '100vh',
       backgroundSize: 'cover', // 背景图片覆盖整个容器
       backgroundPosition: 'center', // 背景图片居中显示
