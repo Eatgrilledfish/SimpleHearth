@@ -24,7 +24,7 @@ const LearnContent = () => {
           alt="Image 1"
           title="Your Heart"
           description={<span>
-            Cold <a href="https://example.com">this link</a> homes can put a strain on your heart. Studies link low indoor temperatures to increased blood pressure, a major risk factor for heart disease. Aim for a minimum of 18°C, but remember vulnerable groups like older adults, children, and those with chronic illnesses may need it even warmer.
+            Cold  homes can put a strain on your heart. <a href="https://www.ncbi.nlm.nih.gov/books/NBK535294/">Studies</a> link low indoor temperatures to increased blood pressure, a major risk factor for heart disease. Aim for a minimum of 18°C, but remember vulnerable groups like older adults, children, and those with chronic illnesses may need it even warmer.
           </span>
           }
         />
@@ -32,13 +32,15 @@ const LearnContent = () => {
           src="lung.jpg"
           alt="Image 2"
           title="Your Lungs"
-          description="Extreme temperatures, both hot and cold, can increase your risk of respiratory problems. Cold air weakens your immune system and irritates airways, making you more susceptible to illnesses like pneumonia and bronchitis. Hot air can have similar effects, and may also worsen chronic conditions like COPD and asthma."
+          description={<span>Extreme temperatures, both hot and cold, can increase your risk of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8156969/">respiratory problems</a>. Cold air weakens your immune system and irritates airways, making you more susceptible to illnesses like pneumonia and bronchitis. Hot air can have similar effects, and may also worsen chronic conditions like COPD and asthma.</span>}
+          
         />
         <ImageText
           src="brain.png"
           alt="Image 3"
           title="Your Brainpower"
-          description="Did you know your brain prefers a comfortable temperature too? Research suggests a link between indoor air temperature and how well you think. People performed best on tasks in rooms at a comfortable 22°C. Both hotter and colder temperatures led to more mistakes, suggesting feeling too hot or cold can hinder focus and concentration."
+          description={<span>Did you know your brain prefers a comfortable temperature too? <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6377698/">Research</a> suggests a link between indoor air temperature and how well you think. People performed best on tasks in rooms at a comfortable 22°C. Both hotter and colder temperatures led to more mistakes, suggesting feeling too hot or cold can hinder focus and concentration.</span>}
+          
         />
       </Box>
       
@@ -80,7 +82,8 @@ const LearnContent = () => {
           src="socks.jpg"
           alt="Image 6"
           
-          description="Adjusting your thermostat down by just 1° can save you 5-10% on heating costs! In Melbourne, as temperatures dip, so does your wallet, with winter electricity bills often surpassing summer expenses by up to $200 or more.Embrace the warmth of cozy socks, home uggs, and layers before reaching for that thermostat dial. Your bank account will appreciate it!"
+          description={<span>Adjusting your thermostat down by just 1° can <a href="https://www.energy.gov.au/households/household-guides/seasonal-advice/winter">Save</a> you 5-10% on heating costs! In Melbourne, as temperatures dip, so does your wallet, with <a href="https://www.comparethemarket.com.au/news/the-added-cost-of-electricity-usage-in-winter-vs-summer/">winter electricity bills</a> often surpassing summer expenses by up to $200 or more.Embrace the warmth of cozy socks, home uggs, and layers before reaching for that thermostat dial. Your bank account will appreciate it!</span>}
+          
         />
       </Box>
 
