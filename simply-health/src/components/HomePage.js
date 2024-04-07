@@ -21,8 +21,8 @@ const HomePage = () => {
         </Typography>
         <Button variant="contained" sx={{
           mt: 2, // Button top margin
-          backgroundColor: '#ADD8E6', // Light blue background
-          color: 'white', // White text
+          backgroundColor: '#52F9EF', // Light blue background
+          color: '#775556', // White text
           '&:hover': {
             backgroundColor: '#90CEE6', // Change background on hover
           },
