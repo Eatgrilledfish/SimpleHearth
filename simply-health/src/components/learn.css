@@ -1,0 +1,40 @@
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    }
+
+.headingBox {
+    background-color: #FFFACD; /* 淡黄色 */
+    color: red; /* 文字颜色 */
+    width: 100%;
+    font-size: 20px;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.imageText, .imageTextSingle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.imageText img, .imageTextSingle img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.imageText div h3, .imageTextSingle h3 {
+    color: red;
+    margin: 0 0 5px 0;
+}
+
+.imageText div p, .imageTextSingle p {
+    margin: 0;
+}
