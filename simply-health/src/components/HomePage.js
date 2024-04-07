@@ -1,7 +1,8 @@
 import { Container, Typography, Button, Box, Paper } from '@mui/material';
-import InputFileUpload from './InputFileUpload';
+import InputFileUpload from './InputFileUpload'; 
 
 const HomePage = () => {
+
   return (
     <>
       <Box sx={{
@@ -37,7 +38,7 @@ const HomePage = () => {
           <Typography variant="body1" gutterBottom>
           Fill our downloadable template with your previous E-bills and upload it to see your next month's estimate.
           </Typography>
-          <Button variant="contained">Upload</Button>
+          <InputFileUpload />
         </Box>
         <Box>
           <img src="/upload.png" alt="Side Image" style={{ width: '450px', height: '450px' }} />
