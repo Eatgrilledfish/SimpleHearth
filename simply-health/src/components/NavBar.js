@@ -34,9 +34,10 @@ const NavBar = () => {
       <Box sx={{
         flexGrow: 0,
         
-        height: '230px', // 根据导航栏的高度调整，也可以调整logo的大小以适应新高度
+        height: '100px', // 根据导航栏的高度调整，也可以调整logo的大小以适应新高度
+        
       }}>
-        < img src="/SimpleHearthLogo.png" alt="Logo" style={{ height: '100%' }} />
+        < img src="/logo.png" alt="Logo" style={{ height: '100%' }} />
       </Box>
 
       {/* Navigation Tabs Container */}
