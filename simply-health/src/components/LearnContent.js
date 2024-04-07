@@ -3,9 +3,9 @@ import { Box, Typography, CardMedia } from '@mui/material';
 const ImageText = ({ src, alt, title, description }) => (
   <Box sx={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 2 }}>
     <CardMedia component="img" image={src} alt={alt} sx={{ width: 300, height: 250 ,borderRadius: 5,marginLeft: 30}} />
-    <Box sx={{ marginRight: 30,width: '100%' }}>
+    <Box sx={{ marginRight: 30 ,width: '100%'}}>
       <Typography variant="h6" component="h3"sx={{ textAlign: 'center' ,color: 'red',marginBottom:'20px'}}>{title}</Typography>
-      <Typography variant="body1">{description}</Typography>
+      <Typography variant="body1" sx={{ textAlign: 'justify'}}>{description}</Typography>
     </Box>
   </Box>
 );
