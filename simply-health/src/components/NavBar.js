@@ -6,6 +6,13 @@ import { useRouter } from 'next/router';
 const NavBar = () => {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
+  const handleSearch = (e) => {
+    // 阻止表单默认提交行为
+    e.preventDefault();
+
+    // 实际搜索逻辑
+    console.log(`Searching for: ${searchQuery}`);
+  };
 
   const tabItems = [
     { label: 'HOME', path: '/' },
@@ -26,6 +33,7 @@ const NavBar = () => {
     <Box sx={{
       display: 'flex', 
       alignItems: 'center', 
+
       
       bgcolor: '#775556', // 整个导航栏的背景色，这里使用深蓝色作为示例
       height: '80px', // 调整整个导航栏的高度
@@ -41,7 +49,7 @@ const NavBar = () => {
 
       {/* Navigation Tabs Container */}
       <Box sx={{
-        flexGrow: 2, 
+        flexGrow: 1, 
         bgcolor: 'transparent', // 使Tabs背景透明，以适应整体风格
         borderRadius: '4px', 
         marginLeft: '24px',
@@ -74,42 +82,37 @@ const NavBar = () => {
       </Box>
 
       {/* Spacer to the right of tabs */}
-      <Box sx={{ flexGrow: 1 }} />
-      <TextField
-        variant="outlined"
-        size="small"
-        placeholder="Search..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        onKeyPress={(e) => e.key === 'Enter' && handleSearch(e)}
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <SearchIcon style={{ color: '#FFF' }} /> 
-            </InputAdornment>
-          ),
-        }}
-        sx={{
-          marginRight: 2,
-          ".MuiOutlinedInput-root": {
-            "& fieldset": {
-              borderColor: "#775556", // 修改边框颜色
+      <Box sx={{  display: 'flex', alignItems: 'center', transform: 'translateX(-150px)' }}>
+        <TextField
+          variant="outlined"
+          size="small"
+          placeholder="Search the Site"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && handleSearch(e)}
+          sx={{
+            marginLeft: '-100px',
+            ".MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "#775556", // 修改边框颜色
+              },
+              "&:hover fieldset": {
+                borderColor: "#775556", // 鼠标悬停时边框颜色
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "#775556", // 聚焦时边框颜色
+              },
             },
-            "&:hover fieldset": {
-              borderColor: "#775556", // 鼠标悬停时边框颜色
+            ".MuiInputBase-input": {
+              color: "#100F0F", // 修改文字颜色
             },
-            "&.Mui-focused fieldset": {
-              borderColor: "#775556", // 聚焦时边框颜色
-            },
-          },
-          ".MuiInputBase-input": {
-            color: "#100F0F", // 修改文字颜色为白色
-          },
-          backgroundColor: "#A1A295", // 背景色
-          borderRadius: 1, // 边框圆角
-          width: 'auto', // 根据需要调整宽度
-        }}
-      />
+            backgroundColor: "#A1A295", // 背景色
+            borderRadius: 1, // 边框圆角
+            width: 'auto', // 根据需要调整宽度
+          }}
+        />
+        <SearchIcon style={{ color: '#FFF', cursor: 'pointer', marginLeft: '10px' }} onClick={handleSearch} />
+      </Box>
 
     </Box>
   );

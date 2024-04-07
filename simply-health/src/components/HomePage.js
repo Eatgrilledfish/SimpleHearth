@@ -16,8 +16,8 @@ const HomePage = () => {
         backgroundPosition: 'center', // Center the background image
         textAlign: 'center', // Center the text
       }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Is bad insulation costing you more than money?
+        <Typography variant="h4" component="h1" gutterBottom sx={{mt:2,}}>
+          Is Bad Insulation Costing You More Than Money?
         </Typography>
         <Button variant="contained" sx={{
           mt: 2, // Button top margin
