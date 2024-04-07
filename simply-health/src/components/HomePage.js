@@ -10,13 +10,13 @@ const HomePage = () => {
         flexDirection: 'column', // Stack items vertically
         alignItems: 'center', // Center items horizontally
         justifyContent: 'center', // Center items vertically
-        height: '100vh', // Make the Box take up the full viewport height
+        height: '130vh', // Make the Box take up the full viewport height
         backgroundImage: `url(${'/sweethome.png'})`,
         backgroundSize: 'cover', // Ensure the image covers the Box
         backgroundPosition: 'center', // Center the background image
         textAlign: 'center', // Center the text
       }}>
-        <Typography variant="h4" component="h1" gutterBottom sx={{mt:2,}}>
+        <Typography variant="h4" component="h1" gutterBottom sx={{mt:-80,}}>
           Is Bad Insulation Costing You More Than Money?
         </Typography>
         <Button variant="contained" sx={{
@@ -34,9 +34,13 @@ const HomePage = () => {
       {/* 新增的白色背景Box */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 4, bgcolor: 'white', mt: 2 ,height: '600px'}}>
         <Box>
-          <Typography variant="h5" gutterBottom>Seeing Is believing</Typography>
+          <Typography variant="h5" gutterBottom  sx={{
+          fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', // 示例字体
+          fontWeight: 'bold', // 字体粗细
+          color: '#1976d2', // 字体颜色，这里使用蓝色
+        }}>Seeing Is believing</Typography>
           <Typography variant="body1" gutterBottom>
-          Fill our downloadable template with your previous E-bills and upload it to see your next month's estimate.
+          Fill Our <a href='https://drive.google.com/file/d/1acYWqWA-t7_Kp4P3Pku4lvN1n3qgNzVs/view?usp=sharing'>Downloadable</a> Template With Your Previous E-bills And Upload It To See Your Next Month's Estimate.
           </Typography>
           <InputFileUpload />
         </Box>
