@@ -14,9 +14,3 @@ export default function MyApp({ Component, pageProps }) {
     </ThemeProvider>
   );
 }
-// pages/_app.js
-import '../src/pages/index.css'; // 确保路径正确
-
-export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
