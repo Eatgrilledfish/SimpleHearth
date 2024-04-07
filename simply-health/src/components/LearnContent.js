@@ -23,7 +23,10 @@ const LearnContent = () => {
           src="heart.jpeg"
           alt="Image 1"
           title="Your Heart"
-          description="Cold homes can put a strain on your heart. Studies link low indoor temperatures to increased blood pressure, a major risk factor for heart disease. Aim for a minimum of 18°C, but remember vulnerable groups like older adults, children, and those with chronic illnesses may need it even warmer."
+          description={<span>
+            Cold <a href="https://example.com">this link</a> homes can put a strain on your heart. Studies link low indoor temperatures to increased blood pressure, a major risk factor for heart disease. Aim for a minimum of 18°C, but remember vulnerable groups like older adults, children, and those with chronic illnesses may need it even warmer.
+          </span>
+          }
         />
         <ImageText
           src="lung.jpg"
