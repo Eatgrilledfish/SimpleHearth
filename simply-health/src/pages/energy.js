@@ -1,13 +1,13 @@
 // 导入NavBar和Footer组件，以及CSS文件
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import LearnContent from '../components/LearnContent';
+import EnergyContent from '../components/EnergyContent';
 
 export default function Index() {
     return (
         <div>
             <NavBar />
-            <LearnContent/>
+            <EnergyContent/>
             <Footer />
         </div>
     );

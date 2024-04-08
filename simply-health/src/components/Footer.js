@@ -13,11 +13,11 @@ const Footer = () => {
               QUICK Links
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <Link href="#" color="inherit" underline="none">Energy Bill Prediction</Link>
+              <Link href="/" color="inherit" underline="none">Energy Bill Prediction</Link>
               <Link href="/thermalai" color="inherit" underline="none">AI Thermal Image Analysis</Link>
-              <Link href="#" color="inherit" underline="none">DIY Projects</Link>
-              <Link href="#" color="inherit" underline="none">Clothing Recommendation</Link>
-              <Link href="#" color="inherit" underline="none">Health Consequences</Link>
+              <Link href="/thermalai" color="inherit" underline="none">DIY Projects</Link>
+              <Link href="/learn" color="inherit" underline="none">Clothing Recommendation</Link>
+              <Link href="/learn" color="inherit" underline="none">Health Consequences</Link>
               <Link href="#" color="inherit" underline="none">Heat Islands</Link>
             </Box>
           </Grid>
@@ -26,9 +26,9 @@ const Footer = () => {
               Tools
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <Link href="#" color="inherit" underline="none">Energy Bill Prediction</Link>
-              <Link href="#" color="inherit" underline="none">AI Heat Leak Detection</Link>
-              <Link href="#" color="inherit" underline="none">DIY Weatherproofing Projects</Link>
+              <Link href="/" color="inherit" underline="none">Energy Bill Prediction</Link>
+              <Link href="/thermalai" color="inherit" underline="none">AI Heat Leak Detection</Link>
+              <Link href="/learn" color="inherit" underline="none">DIY Weatherproofing Projects</Link>
             </Box>
           </Grid>
           <Grid item xs={12} sm={4} sx={{ mt: -2 }}>
@@ -36,9 +36,9 @@ const Footer = () => {
               Learn
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <Link href="#" color="inherit" underline="none">Clothing Recommendation</Link>
-              <Link href="#" color="inherit" underline="none">Health Consequences</Link>
-              <Link href="#" color="inherit" underline="none">Heat Islands</Link>
+              <Link href="/learn" color="inherit" underline="none">Clothing Recommendation</Link>
+              <Link href="/learn" color="inherit" underline="none">Health Consequences</Link>
+              <Link href="/learn" color="inherit" underline="none">Heat Islands</Link>
             </Box>
           </Grid>
         </Grid>

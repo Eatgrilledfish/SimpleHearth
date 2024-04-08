@@ -1,4 +1,4 @@
-import { Container, Typography, Button, Box, Paper } from '@mui/material';
+import { Typography, Button, Box, Paper } from '@mui/material';
 import InputFileUpload from './InputFileUpload'; 
 import Link from 'next/link';
 
@@ -20,16 +20,18 @@ const HomePage = () => {
         <Typography variant="h4" component="h1" gutterBottom sx={{mt:-80, fontStyle: 'italic'}} >
           Is Bad Insulation Costing You More Than Money?
         </Typography>
-        <Button variant="contained" sx={{
-          mt: 2, // Button top margin
-          backgroundColor: '#52F9EF', // Light blue background
-          color: '#775556', // White text
-          '&:hover': {
-            backgroundColor: '#90CEE6', // Change background on hover
-          },
-        }}>
-          Find Out How
-        </Button>
+        <Link href="/learn" passHref>
+          <Button variant="contained" sx={{
+            mt: 2, // Button top margin
+            backgroundColor: '#52F9EF', // Light blue background
+            color: '#775556', // White text
+            '&:hover': {
+              backgroundColor: '#90CEE6', // Change background on hover
+            },
+          }}>
+            Find Out How
+          </Button>
+        </Link>
       </Box>
 
       {/* 新增的白色背景Box */}
@@ -78,18 +80,18 @@ const HomePage = () => {
             Don't play detective anymore looking for those air leaks in your windows 
           </Typography>
           <Link href="/thermalai" passHref>
-          <Button variant="contained" sx={{
-            mt: 1, 
-            width: 'fit-content',
-            ml:12,
-            backgroundColor: '#775556', // 按钮背景色
-            
-            '&:hover': {
-              backgroundColor: '#9E7A85', // 按钮悬停时的背景色
-            },
-          }}>
-            LET OUR AI HELP YOU
-          </Button>
+            <Button variant="contained" sx={{
+              mt: 1, 
+              width: 'fit-content',
+              ml:12,
+              backgroundColor: '#775556', // 按钮背景色
+              
+              '&:hover': {
+                backgroundColor: '#9E7A85', // 按钮悬停时的背景色
+              },
+            }}>
+              LET OUR AI HELP YOU
+            </Button>
           </Link>
         </Paper>
         <Paper sx={{ bgcolor: '#A29999', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
@@ -97,39 +99,43 @@ const HomePage = () => {
             <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:3}}>
               Jump straight to our DIYs without a second thought 
           </Typography>
-          <Button variant="contained" sx={{
-            mt: 1.5,
-            width: 'fit-content',
-            ml:16,
-            color:'black',
-            backgroundColor: '#52F9EF', // 按钮背景色
-            
-            '&:hover': {
-              backgroundColor: '#3FB8C8'
+          <Link href="/thermalai" passHref>
+            <Button variant="contained" sx={{
+              mt: 1.5,
+              width: 'fit-content',
+              ml:16,
+              color:'black',
+              backgroundColor: '#52F9EF', // 按钮背景色
               
-            },
-          }}>
-            DIY Solutions
-          </Button>
+              '&:hover': {
+                backgroundColor: '#3FB8C8'
+                
+              },
+            }}>
+              DIY Solutions
+            </Button>
+          </Link>
         </Paper>
         <Paper sx={{ bgcolor: '#93E6DE', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
           <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px',mb:6}}>Pick your battles right</Typography>
             <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:4}}>
               Your home may need more than just simple solutions
           </Typography>
-          <Button variant="contained" sx={{
-            mt: 1, // 按钮上边距
-            width: 'fit-content',
-            ml:20,
-            color:'black',
-            backgroundColor: '#F0E5D3', // 按钮背景色
-            
-            '&:hover': {
-              backgroundColor: '#D3C2AC', // 按钮悬停时的背景色
-            },
-          }}>
-              find out
-          </Button>
+          <Link href="/learn" passHref>
+            <Button variant="contained" sx={{
+              mt: 1, // 按钮上边距
+              width: 'fit-content',
+              ml:20,
+              color:'black',
+              backgroundColor: '#F0E5D3', // 按钮背景色
+              
+              '&:hover': {
+                backgroundColor: '#D3C2AC', // 按钮悬停时的背景色
+              },
+            }}>
+                find out
+            </Button>
+          </Link>
         </Paper>
       </Box>
     </>
