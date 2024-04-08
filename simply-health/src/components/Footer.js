@@ -14,7 +14,7 @@ const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               <Link href="#" color="inherit" underline="none">Energy Bill Prediction</Link>
-              <Link href="#" color="inherit" underline="none">AI Thermal Image Analysis</Link>
+              <Link href="/thermalai" color="inherit" underline="none">AI Thermal Image Analysis</Link>
               <Link href="#" color="inherit" underline="none">DIY Projects</Link>
               <Link href="#" color="inherit" underline="none">Clothing Recommendation</Link>
               <Link href="#" color="inherit" underline="none">Health Consequences</Link>

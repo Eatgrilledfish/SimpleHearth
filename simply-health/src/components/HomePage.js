@@ -1,5 +1,6 @@
 import { Container, Typography, Button, Box, Paper } from '@mui/material';
 import InputFileUpload from './InputFileUpload'; 
+import Link from 'next/link';
 
 const HomePage = () => {
 
@@ -76,6 +77,7 @@ const HomePage = () => {
           <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:4}}>
             Don't play detective anymore looking for those air leaks in your windows 
           </Typography>
+          <Link href="/thermalai" passHref>
           <Button variant="contained" sx={{
             mt: 1, 
             width: 'fit-content',
@@ -88,6 +90,7 @@ const HomePage = () => {
           }}>
             LET OUR AI HELP YOU
           </Button>
+          </Link>
         </Paper>
         <Paper sx={{ bgcolor: '#A29999', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
           <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px'}}>Already know what you need?</Typography>
