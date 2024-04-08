@@ -3,7 +3,6 @@ from flask_restx import Api, Resource,fields, reqparse
 from flask_cors import CORS
 import mysql.connector
 import geopandas as gpd
-import matplotlib.pyplot as plt 
 import pandas as pd
 from werkzeug.datastructures import FileStorage
 import io
