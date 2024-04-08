@@ -63,7 +63,7 @@ export default function InputFileUpload({onUploadSuccess}) {
           onChange={handleUpload} // 添加事件处理程序来处理文件上传
         />
       </Button>
-      {report && <div style={{ marginTop: '20px' }}>Report: {report}</div>} {/* 显示报告内容 */}
+      {report && <div style={{ marginTop: '20px' }}>{report}</div>} {/* 显示报告内容 */}
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import { Box, Typography, CardMedia,Grid} from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, CardMedia,Grid,TextField} from '@mui/material';
 
 const ImageText = ({ src, alt, title, description }) => (
   <Grid item xs={12} sm={4}> {/* 设置为整个宽度的1/3 */}
@@ -15,7 +16,31 @@ const imageUrls = [
   { url: 'scarf.jpg', label: 'SCARF' }
 ];
 
+
 const LearnContent = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [result, setResult] = useState(null);
+
+  const handleSearch = async () => {
+    try {
+      // 请替换此URL为你的后端API的实际URL
+      const response = await fetch(`http://127.0.0.1:5000/data/houseyear?street=${encodeURIComponent(searchQuery)}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      setResult(data); // 保存后端返回的数据
+    } catch (error) {
+      console.error("Fetch error: ", error);
+      setResult({ message: 'No results found for the given street name.' });
+    }
+  };
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <>
       {/* Heading 1 */}
@@ -161,10 +186,39 @@ const LearnContent = () => {
         <Typography variant="body1" sx={{ color: 'white',fontWeight:'bold' ,fontStyle:'italic',marginLeft:'80px',marginRight:'300px',textAlign: 'justify',mb: 3}}>
           Use the search bar below to look up your home address and find our how old it is and when it was last refurbished. 
         </Typography>
-         
+
+        <Grid container justifyContent="center" spacing={2} sx={{ mb: 2 }}>
+          <Grid item>
+            <TextField
+              label="Search your home address"
+              variant="outlined"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onKeyDown={handleKeyDown} // 处理键盘按键事件
+              fullWidth
+              sx={{ backgroundColor: 'white', borderRadius: 1,width: '500px'}}
+            />
+          </Grid>
+        </Grid>
+
         <Typography variant="body2" sx={{ color: 'white',fontWeight:'bold' ,fontStyle:'italic',marginLeft:'80px',marginRight:'300px',textAlign: 'justify'}}>
           *Only valid address from Melbourne City will be accepted
         </Typography>
+        {result && (
+          <Box sx={{ color: 'white', mt: 2, textAlign: 'center' }}>
+            {result.message ? (
+              <Typography>{result.message}</Typography>
+            ) : (
+              <div>
+                <Typography>Street Address: {result['Street Address']}</Typography>
+                <Typography>Construction Year: {result['Construction Year']}</Typography>
+                <Typography>Refurbished Year: {result['Refurbished Year']}</Typography>
+                <Typography>House Age: {result['House Age']}</Typography>
+              </div>
+            )}
+          </Box>
+        )}
+        
         
       </Box>
 

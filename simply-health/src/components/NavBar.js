@@ -8,6 +8,8 @@ const searchIndex = {
   "greenery": "/greenery",
   "energy": "/energy",
   "learn": "/learn",
+  "thermal":  "/thermalai",
+  "bill":"/",
   // 其他关键词...
 };
 
