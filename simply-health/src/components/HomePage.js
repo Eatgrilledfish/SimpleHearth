@@ -81,9 +81,9 @@ const HomePage = () => {
           </Typography>
           <Link href="/thermalai" passHref>
             <Button variant="contained" sx={{
-              mt: 1, 
+              mt: 2, 
               width: 'fit-content',
-              ml:15,
+              ml:12,
               backgroundColor: '#775556', // 按钮背景色
               
               '&:hover': {
@@ -96,14 +96,14 @@ const HomePage = () => {
         </Paper>
         <Paper sx={{ bgcolor: '#A29999', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
           <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px'}}>Already know what you need?</Typography>
-            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mt:7}}>
+            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mt:1}}>
               Jump straight to our DIYs without a second thought 
           </Typography>
           <Link href="/thermalai" passHref>
             <Button variant="contained" sx={{
-              mt: 7,
+              mt: 5,
               width: 'fit-content',
-              ml:22,
+              ml:15,
               color:'black',
               backgroundColor: '#52F9EF', // 按钮背景色
               
@@ -123,9 +123,9 @@ const HomePage = () => {
           </Typography>
           <Link href="/learn" passHref>
             <Button variant="contained" sx={{
-              mt: 4, // 按钮上边距
+              mt: 2, // 按钮上边距
               width: 'fit-content',
-              ml:24,
+              ml:17,
               color:'black',
               backgroundColor: '#F0E5D3', // 按钮背景色
               
