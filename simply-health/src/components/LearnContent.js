@@ -141,7 +141,7 @@ const LearnContent = () => {
           <Grid item xs={12} sm={6}>
             <CardMedia
               component="img"
-              image="temperature.png" 
+              image="temperature.jpeg" 
               alt="Descriptive Alt Text"
               sx={{ width: '100%', height: 'auto' }}
             />
