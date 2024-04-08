@@ -1,4 +1,5 @@
 import { Box, Typography, CardMedia } from '@mui/material';
+import StackedLineChart from './StackLineChart'; 
 
 const ImageText = ({ src, alt, title, description }) => (
   <Box sx={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 2 }}>
@@ -64,12 +65,9 @@ const LearnContent = () => {
       </Box>
 
       <Box sx={{ padding: 2 }}>
-        <ImageText
-          src="/path/to/image4.jpg"
-          alt="Image 5"
+        <StackedLineChart />
           
-          description="As the earth gets hotter, so is Melbourne. We currently average 11 days of 35 degrees or higher each year. By 2050, we can expect to experience an average 16 days greater than 35 degrees each year."
-        />
+        <p>As the earth gets hotter, so is Melbourne. We currently average 11 days of 35 degrees or higher each year. By 2050, we can expect to experience an average 16 days greater than 35 degrees each year."</p>
       </Box>
 
       {/* Heading 4 */}

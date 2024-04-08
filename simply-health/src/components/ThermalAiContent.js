@@ -1,7 +1,9 @@
+import React, { useState } from 'react';
 import { Box, Typography, CardMedia, Grid } from '@mui/material';
-import InputFileUpload from './InputFileUpload'; 
+import InputFileUpload from './InputFileUpload_thermal'; 
 
 const ThermalAiContent = () => {
+  const [uploadedImage, setUploadedImage] = useState("thermal image.jpeg");
   const images = [
     { src: "ai1.jpeg", alt: "Image 1", description: <span><a className="my-link" href= "https://www.bunnings.com.au/diy-advice/home-improvement/doors-windows/how-to-weatherproof-your-home-for-winter" >Foam Strips</a></span> },
     { src: "ai2.jpeg", alt: "Image 2", description: <span><a className="my-link" href= "https://www.bunnings.com.au/products/building-hardware/door-hardware/door-seals" >Door Seals</a></span> },
@@ -70,8 +72,8 @@ const ThermalAiContent = () => {
           {/* Image */}
           <CardMedia
             component="img"
-            image="thermal image.jpeg"
-            alt="Descriptive Alt Text"
+            image={uploadedImage} // 更新这里来显示上传的图片
+            alt="Descriptive Alt Text" 
             sx={{ width: 350, height: 300, marginRight: 10 }}
           />
 
@@ -81,7 +83,7 @@ const ThermalAiContent = () => {
             Grab your trusty thermal camera and capture an image of the wall in your chilly room, ensuring doors and windows are covered. Upload your snapshot below, and dive into our AI-generated reports just a scroll away.
             </Typography>
             
-            <InputFileUpload> </InputFileUpload>
+            <InputFileUpload onUploadSuccess={setUploadedImage}> </InputFileUpload>
             
           </Box>
         </Box>
