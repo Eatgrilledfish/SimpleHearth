@@ -22,7 +22,7 @@ export default function InputFileUpload() {
       role={undefined}
       variant="contained"
       tabIndex={-1}
-      startIcon={<CloudUploadIcon />}
+      startIcon={<CloudUploadIcon />}sx={{ml:15}}
     >
       Upload file
       <VisuallyHiddenInput type="file" />

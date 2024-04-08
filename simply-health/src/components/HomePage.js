@@ -36,37 +36,50 @@ const HomePage = () => {
         <Box>
           <Typography variant="h5" gutterBottom  sx={{
           fontFamily: '"Open Sans", sans-serif', // 示例字体
-          fontWeight: 450, // 字体粗细
-          color: '#000000', // 字体颜色，这里使用蓝色
-          fontSize: '36px'
+          fontWeight: 500, 
+          color: '#000000', 
+          fontSize: '36px',
+          ml: 15
         }}>Seeing Is believing</Typography>
           <Typography variant="body1" gutterBottom sx={{
           fontFamily: '"Open Sans", sans-serif', // 示例字体
-    
+          fontWeight: 600, 
           color: '#000000', // 字体颜色
           fontSize: '16px',
-          marginBottom: theme => theme.spacing(5),
+          ml:15,
+          marginBottom: theme => theme.spacing(2),
         }}>
           Fill Our <a href='https://drive.google.com/file/d/1acYWqWA-t7_Kp4P3Pku4lvN1n3qgNzVs/view?usp=sharing'>Downloadable</a> Template With Your Previous E-bills And Upload It To See <br></br>Your Next Month's Estimate.
           </Typography>
-          <InputFileUpload sx={{mt:2}}/>
+          <Typography variant="body1" gutterBottom sx={{
+          fontFamily: '"Open Sans", sans-serif', 
+          fontWeight: 600, 
+          color: '#000000',
+          fontSize: '16px',
+          ml:15,
+          marginBottom: theme => theme.spacing(5),
+        }}>
+            Knowing the financial impact of poor insulation is crucial in your journey toward enhancing home comfort. Take the first Step Today!
+          </Typography>
+          <InputFileUpload/>
         </Box>
         <Box>
           <img src="/upload.png" alt="Side Image" style={{ width: '450px', height: '450px' }} />
         </Box>
       </Box>
 
+
       {/* 粉色背景Box，包含三个长方形模块 */}
-      <Box sx={{ display: 'flex', justifyContent: 'space-around', p: 3, bgcolor: 'pink', mt: 2, height: '350px'}}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-around', p: 1, bgcolor: '#F8C9D1', mt: 2, height: '350px'}}>
         <Paper sx={{ bgcolor: '#F0E5D3', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
-          <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '20px'}}>Where's that dratted draft coming from?</Typography>
-          <Typography variant="body1"  gutterBottom  sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '16px'}}>
-          Don't play detective anymore 
+          <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px'}}>Where's that dratted draft coming from?</Typography>
+          <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:4}}>
+            Don't play detective anymore looking for those air leaks in your windows 
           </Typography>
           <Button variant="contained" sx={{
-            mt: 6, // 按钮上边距
+            mt: 1, 
             width: 'fit-content',
-            ml:10,
+            ml:12,
             backgroundColor: '#775556', // 按钮背景色
             
             '&:hover': {
@@ -77,31 +90,42 @@ const HomePage = () => {
           </Button>
         </Paper>
         <Paper sx={{ bgcolor: '#A29999', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
+          <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px'}}>Already know what you need?</Typography>
+            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:3}}>
+              Jump straight to our DIYs without a second thought 
+          </Typography>
           <Button variant="contained" sx={{
-            mt: 26, // 按钮上边距
+            mt: 1.5,
             width: 'fit-content',
-            ml:20,
-            backgroundColor: '#775556', // 按钮背景色
+            ml:16,
+            color:'black',
+            backgroundColor: '#52F9EF', // 按钮背景色
             
             '&:hover': {
-              backgroundColor: '#9E7A85', // 按钮悬停时的背景色
+              backgroundColor: '#3FB8C8'
+              
             },
           }}>
-            label
+            DIY Solutions
           </Button>
         </Paper>
         <Paper sx={{ bgcolor: '#93E6DE', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
+          <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px',mb:6}}>Pick your battles right</Typography>
+            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:4}}>
+              Your home may need more than just simple solutions
+          </Typography>
           <Button variant="contained" sx={{
-            mt: 26, // 按钮上边距
+            mt: 1, // 按钮上边距
             width: 'fit-content',
             ml:20,
-            backgroundColor: '#775556', // 按钮背景色
+            color:'black',
+            backgroundColor: '#F0E5D3', // 按钮背景色
             
             '&:hover': {
-              backgroundColor: '#9E7A85', // 按钮悬停时的背景色
+              backgroundColor: '#D3C2AC', // 按钮悬停时的背景色
             },
           }}>
-            label
+              find out
           </Button>
         </Paper>
       </Box>
