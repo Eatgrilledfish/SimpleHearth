@@ -83,7 +83,7 @@ const HomePage = () => {
             <Button variant="contained" sx={{
               mt: 1, 
               width: 'fit-content',
-              ml:12,
+              ml:15,
               backgroundColor: '#775556', // 按钮背景色
               
               '&:hover': {
@@ -96,14 +96,14 @@ const HomePage = () => {
         </Paper>
         <Paper sx={{ bgcolor: '#A29999', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
           <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px'}}>Already know what you need?</Typography>
-            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:3}}>
+            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mt:7}}>
               Jump straight to our DIYs without a second thought 
           </Typography>
           <Link href="/thermalai" passHref>
             <Button variant="contained" sx={{
-              mt: 1.5,
+              mt: 7,
               width: 'fit-content',
-              ml:16,
+              ml:22,
               color:'black',
               backgroundColor: '#52F9EF', // 按钮背景色
               
@@ -118,14 +118,14 @@ const HomePage = () => {
         </Paper>
         <Paper sx={{ bgcolor: '#93E6DE', p: 2, borderRadius: '16px', width: '30%' }} elevation={3}>
           <Typography gutterBottom sx={{padding: '1rem',fontFamily: '"Open Sans", sans-serif',fontSize: '30px',mb:6}}>Pick your battles right</Typography>
-            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:4}}>
+            <Typography variant="body1"  gutterBottom  sx={{fontFamily: '"Open Sans", sans-serif',fontSize: '16px',marginLeft:'20px',marginRight:'60px',textAlign: 'justify',mb:4,mt:7}}>
               Your home may need more than just simple solutions
           </Typography>
           <Link href="/learn" passHref>
             <Button variant="contained" sx={{
-              mt: 1, // 按钮上边距
+              mt: 4, // 按钮上边距
               width: 'fit-content',
-              ml:20,
+              ml:24,
               color:'black',
               backgroundColor: '#F0E5D3', // 按钮背景色
               
