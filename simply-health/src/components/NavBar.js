@@ -1,9 +1,21 @@
-import React,  {useState } from 'react';
-import { Box, Tabs, Tab, TextField, InputAdornment } from '@mui/material';
+import React,  {useState} from 'react';
+import { Box, Tabs, Tab, TextField, InputAdornment,Dialog, DialogTitle, DialogActions, Button } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/router';
+const searchIndex = {
+  "home": "/",
+  "thermalai": "/thermalai",
+  "greenery": "/greenery",
+  "energy": "/energy",
+  "learn": "/learn",
+  // 其他关键词...
+};
+
+
+
 
 const NavBar = () => {
+  const [openDialog, setOpenDialog] = useState(false);
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const handleSearch = (e) => {
@@ -11,7 +23,13 @@ const NavBar = () => {
     e.preventDefault();
 
     // 实际搜索逻辑
-    console.log(`Searching for: ${searchQuery}`);
+    const query = searchQuery.toLowerCase();
+    if (query in searchIndex) {
+      router.push(searchIndex[query]);
+    } else {
+      // 如果没有找到，可能想显示一个错误消息或跳转到通用搜索结果页面
+      setOpenDialog(true);
+    }
   };
 
   const tabItems = [
@@ -113,6 +131,16 @@ const NavBar = () => {
         />
         <SearchIcon style={{ color: '#FFF', cursor: 'pointer', marginLeft: '10px' }} onClick={handleSearch} />
       </Box>
+      {/* 搜索框和其他 UI 元素 */}
+      <Dialog
+        open={openDialog}
+        onClose={() => setOpenDialog(false)}
+      >
+        <DialogTitle>{"No Result Found"}</DialogTitle>
+        <DialogActions>
+          <Button onClick={() => setOpenDialog(false)}>Close</Button>
+        </DialogActions>
+      </Dialog>
 
     </Box>
   );

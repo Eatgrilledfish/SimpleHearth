@@ -1,5 +1,4 @@
-import { Box, Typography, CardMedia,Grid } from '@mui/material';
-import React from 'react';
+import { Box, Typography, CardMedia,Grid} from '@mui/material';
 
 const ImageText = ({ src, alt, title, description }) => (
   <Grid item xs={12} sm={4}> {/* 设置为整个宽度的1/3 */}
@@ -130,9 +129,8 @@ const LearnContent = () => {
         }}>
         <Typography variant="h4" component="div" sx={{ color: '#800000',marginLeft:'100px' }}> Is DIY <span style={{  fontSize: '1.7em' }}>ENOUGH</span> For You</Typography>
       </Box>
-
-      <Box sx={{ padding: 2 }}>
-        <Typography variant="body1" sx={{ fontSize: '20px',fontFamily:'open Sans',fontWeight: 'bold',fontStyle:'italic',display: 'flex',justifyContent:"center",alignItems: 'center',marginBottom: 6,marginLeft:'250px',marginRight:'250px',textAlign: 'justify' }}>
+      <Box sx={{ padding: 2 ,ml:30,mr:30}}>
+        <Typography variant="body1" sx={{ fontSize: '20px',fontFamily:'open Sans',fontWeight: 'bold',fontStyle:'italic',display: 'flex',justifyContent:"center",alignItems: 'center',marginBottom: 5 }}>
           Your locality and Building age may play a bigger role than you think in your home’s capacity to accept dIY solutions. Find out Below!
         </Typography>
       </Box>
