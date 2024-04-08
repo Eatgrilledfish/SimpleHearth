@@ -4,6 +4,9 @@ from flask_cors import CORS
 import mysql.connector
 import geopandas as gpd
 import matplotlib.pyplot as plt 
+import pandas as pd
+from werkzeug.datastructures import FileStorage
+import io
 import json
 import requests
 import datetime
@@ -31,8 +34,6 @@ from werkzeug.datastructures import FileStorage
 # 创建一个解析器
 upload_parser = reqparse.RequestParser()
 upload_parser.add_argument('file', location='files', type=FileStorage, required=True, help="The file to upload")
-
-
 
 
 @ns.route('/temperature')
@@ -185,30 +186,37 @@ class Upload(Resource):
         else:
             return {'message': 'Failed to generate report'}, 500
 
-@ns.route('/uploads')
-class Upload(Resource):
+@ns.route('/csvupload')
+class CSVUpload(Resource):
     @ns.expect(upload_parser)
     def post(self):
-        """Upload image to Imgur"""
+        """Upload and process CSV file"""
         args = upload_parser.parse_args()
         uploaded_file = args['file']  # 通过解析器获取文件
 
         if uploaded_file:
             filename = uploaded_file.filename
-            if filename == '':
-                return {'message': 'No selected file'}, 400
+            # 验证文件名是否符合预期
+            if filename != 'energy datasheet.csv':
+                return {'message': 'Invalid file name. The file name must be "energy datasheet.csv"'}, 400
 
-            headers = {'Authorization': f'Client-ID {CLIENT_ID}'}
-            files = {'image': (filename, uploaded_file, 'multipart/form-data')}
-            response = requests.post('https://api.imgur.com/3/image', headers=headers, files=files)
-            
-            if response.status_code == 200:
-                data = response.json()
-                return {'url': data['data']['link']}
-            else:
-                return {'message': 'Upload failed'}, 500
+            try:
+                # 使用Pandas直接从上传的文件对象读取数据
+                df = pd.read_csv(uploaded_file, usecols=[0, 1], low_memory=False)
+
+                # 计算3个月滚动平均值
+                rolling_mean = df['Amount'].rolling(window=3).mean()
+
+                # 获取最后一个滚动平均值作为下一个月的预测值
+                next_month_prediction = round(rolling_mean.iloc[-1], 2)
+                print(next_month_prediction)
+
+                return {'next_month_prediction': next_month_prediction}
+            except Exception as e:
+                return {'message': str(e)}, 500
         else:
             return {'message': 'No file part'}, 400
+
 
 if __name__ == '__main__':
     app.run(debug=True)
