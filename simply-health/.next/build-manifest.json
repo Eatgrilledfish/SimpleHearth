@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/R_1ap1Kbgjp15Be0xybyX/_buildManifest.js",
-    "static/R_1ap1Kbgjp15Be0xybyX/_ssgManifest.js"
+    "static/hY6A5vC2dABiIDnkMBJP1/_buildManifest.js",
+    "static/hY6A5vC2dABiIDnkMBJP1/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -16,7 +16,7 @@
       "static/chunks/main-d2ba44903cd47711.js",
       "static/chunks/579-125bac8adab72a11.js",
       "static/chunks/525-ae00eed6426c6f14.js",
-      "static/chunks/pages/index-0943549b1ca09df9.js"
+      "static/chunks/pages/index-71b120ea67688d53.js"
     ],
     "/_app": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
@@ -49,7 +49,7 @@
       "static/chunks/framework-5429a50ba5373c56.js",
       "static/chunks/main-d2ba44903cd47711.js",
       "static/chunks/579-125bac8adab72a11.js",
-      "static/chunks/pages/learn-e4b538302cf0bf95.js"
+      "static/chunks/pages/learn-3d0e6d9e107975cc.js"
     ],
     "/thermalai": [
       "static/chunks/webpack-0b5d8249fb15f5f3.js",
@@ -57,7 +57,7 @@
       "static/chunks/main-d2ba44903cd47711.js",
       "static/chunks/579-125bac8adab72a11.js",
       "static/chunks/581-b03ce17fd30a4f73.js",
-      "static/chunks/pages/thermalai-0a04ce4c2c235ddd.js"
+      "static/chunks/pages/thermalai-ad85e39a27f6e676.js"
     ]
   },
   "ampFirstPages": []

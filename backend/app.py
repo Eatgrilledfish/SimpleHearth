@@ -172,7 +172,7 @@ class Upload(Resource):
                 }
             ],
             "safe_mode": False,
-            "max_tokens": 800
+            "max_tokens": 400
         }
 
         gpt_response = requests.post(url, headers=headers, json=data)
