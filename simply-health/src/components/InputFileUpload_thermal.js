@@ -57,7 +57,7 @@ export default function InputFileUpload({onUploadSuccess}) {
         variant="contained"
         startIcon={<CloudUploadIcon />}
       >
-        Upload file
+        Upload Image
         <VisuallyHiddenInput
           type="file"
           onChange={handleUpload} // 添加事件处理程序来处理文件上传

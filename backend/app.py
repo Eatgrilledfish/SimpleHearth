@@ -156,7 +156,19 @@ class Upload(Resource):
             "messages": [
                 {
                     "role": "user",
-                    "content": f"describe this image. This is the image: {img_addr}"
+                    "content": [
+                        {"type": "text", "text": "As a thermal image advisor, recognize this thermal image, generatee a report of the heat loss area, use third part view,no general words, just generate a reeport of it. And give solution of it. Typically, warmer areas are indicated by red, orange, or yellow, while cooler areas might be blue, purple, or green. Note any distinct shapes or patterns you see. For example, linear patterns might suggest drafts around doors or windows, while spots could indicate moisture or lack of insulation. Point out any specific areas in the image that concern you or seem unusual, like particularly hot or cold spots. Don't say as a AI you can not recognize the thermal image. If you think this is not a thermal image, you have to be '100%' sure, then you can say 'Sorry, this is not a thermal image.'"},
+                        {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": img_addr,
+                        },
+                        },
+                    ],
+                },
+                {
+                    "role": "system",
+                    "content" : "You are trained to interpret images about people and make responsible assumptions about them."
                 }
             ],
             "safe_mode": False,
