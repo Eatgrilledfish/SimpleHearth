@@ -39,7 +39,7 @@ export default function InputFileUpload() {
     formData.append('file', uploadedFile);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/data/csvupload', { // 注意这里的URL要与你的后端路由匹配
+      const response = await fetch('http://3.106.227.168:8000/data/csvupload', { // 注意这里的URL要与你的后端路由匹配
         method: 'POST',
         body: formData,
       });
