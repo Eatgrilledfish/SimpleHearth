@@ -24,7 +24,7 @@ const LearnContent = () => {
   const handleSearch = async () => {
     try {
       // 请替换此URL为你的后端API的实际URL
-      const response = await fetch(`http://3.106.227.168:8000/data/houseyear?street=${encodeURIComponent(searchQuery)}`);
+      const response = await fetch(`https://g13.aokodaisuki.com/api/data/houseyear?street=${encodeURIComponent(searchQuery)}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

@@ -7,7 +7,7 @@ const StackedLineChart = () => {
 
   useEffect(() => {
     // 从你的Flask后端获取数据
-    axios.get('http://3.106.227.168:8000/data/temperature').then((response) => {
+    axios.get('https://g13.aokodaisuki.com/api/data/temperature').then((response) => {
       const data = response.data;
       // 处理数据，生成ECharts配置
       const years = data.summer.map(item => item.YearGroup);

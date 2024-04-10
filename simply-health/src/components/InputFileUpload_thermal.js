@@ -38,7 +38,7 @@ export default function InputFileUpload({onUploadSuccess}) {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://3.106.227.168:8000/data/upload', formData, {
+      const response = await axios.post('https://g13.aokodaisuki.com/api/data/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
