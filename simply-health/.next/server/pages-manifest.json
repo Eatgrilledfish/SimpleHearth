@@ -1,10 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/learn": "pages/learn.js",
-  "/energy": "pages/energy.js",
-  "/greenery": "pages/greenery.js",
-  "/thermalai": "pages/thermalai.js",
-  "/": "pages/index.js"
-}
+{"/_app":"pages/_app.js","/energy":"pages/energy.html","/greenery":"pages/greenery.html","/":"pages/index.html","/learn":"pages/learn.html","/thermalai":"pages/thermalai.html","/_error":"pages/_error.js","/_document":"pages/_document.js","/404":"pages/404.html"}
